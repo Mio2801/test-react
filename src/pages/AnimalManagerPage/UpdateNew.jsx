@@ -263,13 +263,13 @@ const Update = (searchInput, kingdom_id, phylum_id, class_id, order_id, family_i
             selectedOrder.length > 0 &&
             selectedFamily.length > 0 &&
             selectedGenus.length > 0) {
-			alert("Cập Nhật Người dùng thành công");
-            navigate("/")
 			setErrors({});
 			dispatch(UpdateSpeciesAction({ id: updating, data: dataUpdate, kingdom_id: allKingdom, phylum_id: allPhylum, class_id: allClass, order_id: allOrder, family_id: allFamily, genus_id: allGenus }))
 				.then(() => {
 					dispatch(getSpeciesAction({ page: pagination.page, itemsPerPage: pagination.perpage, search: searchInput, kingdom_id: allKingdom, phylum_id: allPhylum, class_id: allClass, order_id: allOrder, family_id: allFamily, genus_id: allGenus}));
 				})
+			alert("Cập Nhật Người dùng thành công");
+            navigate("/")
 		} else {
 			setErrors(validationErrors);
 		}
