@@ -32,7 +32,7 @@ const AnimalManagerPage = () => {
 	}, [dispatch])
 	
 	const handleSearchChange = (event) => {
-		// setsearchInput(event.target.value);
+		setsearchInput(event.target.value);
 		dispatch(getSpeciesAction({
 			page: 1,
 			perpage: pagination.itemsPerPage,
